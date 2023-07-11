@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+body {
+  max-width: 1920px;
+  /* background-color: #ccc; */
+  color: #111;
+  font-style: 16px;
+  line-height: 1.5;
+  font-family: "Noto Sans KR", sans-serif, "Apple SD Gothic Neo";
+  font-weight: 400;
+}
+
+/* header */
+.header {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: relative;
+  align-items: center;
+  background-color: inherit;
+  z-index: 100;
+  height: 136px;
+  /* background-color: #ddd; */
+}
+
+.header-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+}
+
+.header-head img {
+  width: 200px;
+  height: 24px;
+}
+
+.header-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-btns a img {
+  display: block;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+.header-body {
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hb-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.hb-left li {
+  padding-right: 10px;
+  text-align: center;
+}
+
+.hb-left > li > a {
+  font-weight: 700;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.hb-left > li > a:hover {
+  font-weight: 900;
+}
+
+.hb-left > li > a.active:last-child {
+  opacity: 0;
+}
+
+.hb-left > li:last-child > a::after {
+  content: "";
+  position: absolute;
+  top: calc(30%);
+  transform: translateY(-50%);
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background: #1c47df;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hb-left-category {
+  display: flex;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  background-color: #fff;
+  display: none;
+}
+
+.hb-left-category > li > a {
+  display: block;
+  margin: 20px 30px;
+}
+
+.hb-left li ul li ul {
+  display: none;
+}
+
+.hb-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hb-right li a {
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.hb-right li:hover a {
+  font-weight: 700;
+}

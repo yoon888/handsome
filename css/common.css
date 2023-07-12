@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
 
+/* 변수정의 */
+:root {
+  --title-01: 38px;
+  --brandname-02: 10px;
+  --name-03: 14px;
+  --price-04: 12px;
+  --footer-01: 11px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,19 +36,24 @@ body {
   line-height: 1.5;
   font-family: "Noto Sans KR", sans-serif, "Apple SD Gothic Neo";
   font-weight: 400;
+  margin: 0 auto;
 }
 
 /* header */
 .header {
   max-width: 1920px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 50px;
-  position: relative;
   align-items: center;
   background-color: inherit;
   z-index: 100;
   height: 136px;
+  position: absolute;
+  top: 0;
   /* background-color: #ddd; */
+}
+/* left: 0; */
+.header-wrap {
 }
 
 .header-head {
@@ -150,4 +164,88 @@ body {
 
 .hb-right li:hover a {
   font-weight: 700;
+}
+
+/* footer */
+.footer {
+  margin: 160px 0 0;
+  border-top: 1px solid #000;
+  background-color: #fff;
+}
+
+.footer-wrap {
+  max-width: 1800px;
+  margin: 0 50px;
+}
+
+.footer-wrap .top {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-wrap .top .notice {
+  display: flex;
+  font-size: 14px;
+}
+
+.footer-wrap .top .notice h3 {
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+.footer-wrap .top .sns_icon {
+  width: 300px;
+}
+
+.footer-wrap .top .sns_icon img {
+  width: 70%;
+  height: 70%;
+  display: block;
+}
+
+.footer-wrap .bottom {
+  width: 100%;
+  height: 205px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-wrap .bottom .f_info .f_logo {
+  background-image: url("../images/f_logo.png");
+  width: 200px;
+  height: 24px;
+}
+
+.footer-wrap .bottom .f_info .f_text {
+  margin-top: 16px;
+}
+
+.footer-wrap .bottom .f_info .f_text span {
+  margin-right: 16px;
+  font-size: var(--footer-01);
+}
+
+.footer-wrap .bottom .f_info .f_text p {
+  margin-top: 16px;
+  font-size: var(--footer-01);
+  color: #707070;
+}
+
+.footer-wrap .bottom .f_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.footer-wrap .bottom .f_links .f_link {
+  margin-left: 80px;
+  height: 130px;
+  font-size: 12px;
+}
+
+.footer-wrap .bottom .f_links .f_link:last-child {
+  width: 300px;
 }

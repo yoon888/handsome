@@ -96,6 +96,8 @@
   margin-top: 140px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-bottom: 140px;
+  position: relative;
 }
 
 .main-brand .title h2 {
@@ -104,84 +106,60 @@
   display: block;
 }
 
-.main-brand .items {
-  margin-top: 32px;
+.mbn-slide {
   display: flex;
   flex-direction: row;
+  margin-top: 32px;
   overflow: hidden;
-  width: 100%;
   height: 100%;
-}
-
-.main-brand .items .item {
-}
-
-.main-brand .photo {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.main-brand .photo-tb {
-  margin-right: 24px;
-  /* width: 280px; */
   width: 100%;
 }
 
-.main-brand .photo-tb .top {
-  position: relative;
+.mbn-item {
   width: 280px;
-  /* width: 100%; */
+  margin-right: 24px;
 }
 
-.main-brand .photo-tb .bottom {
-  width: 100%;
-  position: relative;
-  /* width: 280px; */
-  margin-top: 24px;
-}
-
-.main-brand .photo-tb img {
-  /* width: 280px; */
+.mbn-image img {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.main-brand .photo-tb .top .text {
-  position: absolute;
-  top: 0;
-  left: 0;
+.mbn-image .bottom {
+  position: relative;
+  margin-top: 24px;
 }
 
-.main-brand .photo-tb .bottom .text {
+.mbn-image .text {
   position: absolute;
   bottom: 24px;
   left: 24px;
   right: 24px;
   background-color: #fff;
   padding: 24px;
+  display: none;
 }
 
-.photo-tb .bottom .text h4 {
+.mbn-image .text h4 {
   font-size: var(--brandname-02);
   margin-top: 2px;
   font-weight: 700;
 }
 
-.photo-tb .bottom .text h3 {
+.mbn-image .bottom .text h3 {
   margin-top: 2px;
   font-size: var(--name-03);
   font-weight: 400;
 }
 
-.photo-tb .bottom .text p {
+.mbn-image .bottom .text p {
   margin-top: 8px;
   font-size: var(--price-04);
   font-weight: 700;
 }
 
-.photo-tb .bottom .text a {
+.mbn-image .bottom .text a {
   margin-top: 24px;
   display: inline-block;
   width: 18px;
@@ -189,27 +167,31 @@
   background-image: url("../images/Arrow\ 1.png");
   background-size: 500px auto;
   background-repeat: no-repeat;
-  /* background-position: -350px -100px; */
+  background-color: red;
 }
 
-.scroll-bar {
-  /* position: absolute;
+/* .slick-dots {
+}
+
+.slick-dots .li button {
+  position: absolute;
   bottom: 0;
-  left: 0; */
-  margin-top: 60px;
-  height: 1px;
-  background-color: #ccc;
-  width: 100%;
+  left: 0;
+  width: 1920px;
+  height: 2px;
+  background-color: red;
+  z-index: 100;
 }
 
-.scroll-bar .scroll {
-  background-color: #111;
-  height: 1px;
-  border-radius: 10px;
-  width: 594px;
+.slick-dots button::before {
+  display: none;
+} */
+
+.page {
+  display: none;
 }
 
-/* main-new  */
+/* main-new */
 .main-new {
   max-width: 1920px;
   margin-top: 140px;
@@ -374,9 +356,56 @@
   font-weight: 700;
 }
 
+.best-contents .bottom {
+}
+
 .best-contents .bottom-items {
   display: flex;
-  /* overflow: hidden; */
+  overflow: hidden;
+}
+
+.best-contents .bottom-items .photo {
+  position: relative;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  z-index: 1;
+  transform: translateY(-50%);
+  background-color: inherit;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../images/left_arrow.png");
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slick-prev::before {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  z-index: 1;
+  transform: translateY(-50%);
+  background-color: inherit;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../images/angle\ right\ b.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slick-next::after {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .main-best .bottom-items .items {
@@ -398,6 +427,9 @@
 }
 
 .best-contents .bottom-items .items .back {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
 }
 
@@ -655,4 +687,46 @@
   font-size: var(--price-04);
   font-weight: 700;
   margin-top: 8px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .main-brand,
+  .scroll-bar,
+  .main-new,
+  .banner,
+  .main-best,
+  .main-new,
+  .main-unit,
+  .main-contents,
+  .main-hot-keyword,
+  .footer {
+    display: none;
+    height: 100%;
+  }
+
+  .main .slider .left-arrow,
+  .right-arrow {
+    display: none;
+  }
+
+  .main .slider {
+    display: none;
+  }
+
+  .main .page {
+    display: block;
+    width: 100%;
+    max-height: 576px;
+  }
+
+  .main .page .item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main .page .item img {
+    width: 100%;
+    height: 100%;
+  }
 }

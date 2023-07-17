@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>더한섬닷컴 | THE HANDSOME</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="../js/common.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
   </head>
   <body>
     
@@ -33,15 +41,35 @@
         <div class="left-arrow"></div>
         <div class="right-arrow"></div>
       </div>
+
+      <div class="page">
+        <div class="item01">
+          <a href="#x" class="item01"><img src="../images/main-1.png" alt=""></a>
+        </div>
+        <div class="item item02">
+          <a href="#x" class="item02"> <img src="../images/main-2.png" alt=""></a>
+        </div>
+        <div class="item item03">
+          <img src="../images/main-3.png" alt="">
+        </div>
+        <div class="item item04">
+          <img src="../images/main-4.png" alt="">
+        </div>
+        <div class="item item05">
+          <img src="../images/main-5.png" alt="">
+        </div>
+      </div>
   </div>
 
     <div class="main-brand">
       <div class="title">
         <h2>인기 브랜드 신상품</h2>
       </div>
-      <div class="items">
-        <div class="photo">
-          <div class="photo-tb">
+
+      <div class="mbn-slide">
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
               <img src="../images/c-2-1.png" alt="캐시미어 메인 이미지" />
             </div>
@@ -54,8 +82,11 @@
                 <a href="#x" class="link"><img src="../images/Arrow 1.png" alt=""></a>
               </div>
             </div>
+            </div>
           </div>
-          <div class="photo-tb">
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
               <img src="../images/c-2-3.png" alt="캐시미어 메인 이미지" />
             </div>
@@ -69,16 +100,12 @@
               </div>
             </div>
           </div>
-  
-          <div class="photo-tb">
+        </div>
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
               <img src="../images/c-2-5.png" alt="캐시미어 메인 이미지" />
-              <div class="text">
-                <h4>LANVIN COLLECTION</h3>
-                <h3>러플 패널 데님 크롭 셔츠</p>
-                <p>615,000</p>
-                <a href="#x" class="link"></a>
-              </div>
             </div>
             <div class="bottom">
               <img src="../images/c-2-6.png" alt="" />
@@ -90,10 +117,12 @@
               </div>
             </div>
           </div>
-  
-          <div class="photo-tb">
+        </div>
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
-              <img src="../images/m-m-2-7.png" alt="마인 메인 이미지" />
+              <img src="../images/m-m-2-7.png" alt="캐시미어 메인 이미지" />
             </div>
             <div class="bottom">
               <img src="../images/m-2-8.png" alt="" />
@@ -105,10 +134,12 @@
               </div>
             </div>
           </div>
-  
-          <div class="photo-tb">
+        </div>
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
-              <img src="../images/m-2-9.png" alt="마인 메인 이미지" />
+              <img src="../images/m-2-9.png" alt="캐시미어 메인 이미지" />
             </div>
             <div class="bottom">
               <img src="../images/m-2-10.png" alt="" />
@@ -120,7 +151,10 @@
               </div>
             </div>
           </div>
-          <div class="photo-tb">
+        </div>
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
               <img src="../images/m-2-11.png" alt="캐시미어 메인 이미지" />
             </div>
@@ -134,8 +168,10 @@
               </div>
             </div>
           </div>
-  
-          <div class="photo-tb">
+        </div>
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
               <img src="../images/t-2-13.png" alt="캐시미어 메인 이미지" />
             </div>
@@ -149,8 +185,10 @@
               </div>
             </div>
           </div>
-  
-          <div class="photo-tb">
+        </div>
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
               <img src="../images/t-2-15.png" alt="캐시미어 메인 이미지" />
             </div>
@@ -164,8 +202,10 @@
               </div>
             </div>
           </div>
-  
-          <div class="photo-tb">
+        </div>
+        
+        <div class="mbn-item">
+          <div class="mbn-image">
             <div class="top">
               <img src="../images/t-2-17.png" alt="캐시미어 메인 이미지" />
             </div>
@@ -182,13 +222,21 @@
         </div>
 
 
-          
-        
+
+        <ul class="slick-dots slick-dots-bar">
+          <li class="slick-active">
+            <button></button>
+          </li>
+          <li class="slick-active">
+            <button></button>
+          </li>
+          <li class="slick-active">
+            <button></button>
+          </li>
         </div>
-      </div>
-      <div class="scroll-bar">
-        <div class="scroll"></div>
-      </div>
+      </ul>
+
+  </div>
     </div>
     <div class="main-new">
       <div class="new-items">
@@ -422,10 +470,10 @@
             <div class="items 2">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/8-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/8-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -440,10 +488,10 @@
             <div class="items 3">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/9-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/9-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -458,10 +506,10 @@
             <div class="items 4">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/10-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/10-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -476,10 +524,10 @@
             <div class="items 5">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/11-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/11-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -494,10 +542,10 @@
             <div class="items 6">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/12-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/12-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -509,13 +557,13 @@
                 <img src="../images/love.png" alt="">
               </div>
             </div>
-            <!-- <div class="items 7">
+            <div class="items 7">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/13-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/13-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -526,14 +574,14 @@
               <div class="icon">
                 <img src="../images/love.png" alt="">
               </div>
-            </div> -->
-            <!-- <div class="items 8">
+            </div>
+            <div class="items 8">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/14-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/14-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -544,14 +592,14 @@
               <div class="icon">
                 <img src="../images/love.png" alt="">
               </div>
-            </div> -->
-            <!-- <div class="items 9">
+            </div>
+            <div class="items 9">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/15-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/15-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -562,14 +610,14 @@
               <div class="icon">
                 <img src="../images/love.png" alt="">
               </div>
-            </div> -->
-            <!-- <div class="items 10">
+            </div>
+            <div class="items 10">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/16-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/16-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -580,14 +628,14 @@
               <div class="icon">
                 <img src="../images/love.png" alt="">
               </div>
-            </div> -->
-            <!-- <div class="items 11">
+            </div>
+            <div class="items 11">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/17-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/17-1-b.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -598,14 +646,14 @@
               <div class="icon">
                 <img src="../images/love.png" alt="">
               </div>
-            </div> -->
-            <!-- <div class="items 12">
+            </div>
+            <div class="items 12">
               <div class="photo">
                 <div class="front">
-                  <a href="#x"><img src="../images/7-1.png" alt=""></a>
+                  <a href="#x"><img src="../images/18-1.png" alt=""></a>
                 </div>
                 <div class="back">
-                  <a href="#x"><img src="../images/7-1-b.png" alt=""></a>
+                  <a href="#x"><img src="../images/18-1-1.png" alt=""></a>
                 </div>
               </div>
               <div class="text_box">
@@ -616,7 +664,7 @@
               <div class="icon">
                 <img src="../images/love.png" alt="">
               </div>
-            </div> -->
+            </div>
 
           </div>
         </div>
@@ -745,5 +793,16 @@
   </div>
 
     <div class="footer"></div>
+
+    <script>
+const idx = $('.best-contents .bottom-items .items .photo .front')
+$(".best-contents .bottom-items .items .photo .front").hover(function () {
+    $(".best-contents .bottom-items .items .back").show(),
+    $(".best-contents .bottom-items .items .photo").mouseleave(function () {
+      $(".best-contents .bottom-items .items .back").css("display", "none");
+    });
+  });
+
+    </script>
   </body>
 </html>

@@ -35,60 +35,55 @@
   display: block;
 }
 
-.slide-button {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  display: flex;
-  font-display: row;
-  justify-content: center;
-  bottom: 33px;
+.main .slick-dots {
+  bottom: 25px;
 }
 
-.slide-button a {
-  display: block;
+.main .slick-dots li {
   height: 12px;
   width: 2px;
-  margin: 0 3px;
-  background-color: #fff;
-  border-radius: 0;
-  opacity: 1;
+  margin: 0 4px;
 }
 
-.left-arrow {
-  background-image: url("../images/left_arrow.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.main .slick-dots li.slick-active {
+  background-color: red;
+}
+
+.main .slick-dots li button {
+  width: auto;
+  height: 12px;
+  padding: 2px;
+  font-weight: 700;
+  background: #fff;
+}
+
+.main .slick-dots li button:before {
+  white-space: nowrap;
+  content: attr(index);
+  color: black;
+}
+
+.main .arrows {
   position: absolute;
   top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.main .arrows img {
   opacity: 0;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
-.left-arrow:hover,
-.right-arrow:hover {
-  opacity: 1;
-}
-
-.right-arrow {
-  background-image: url("../images/right_arrow.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-  cursor: pointer;
+.main .arrows img:hover {
+  opacity: 0.6;
 }
 
 /* main-brand */
@@ -115,6 +110,14 @@
   width: 100%;
 }
 
+.main-brand .mbn-dots {
+  width: 20px;
+}
+
+.mbn-dots::before {
+  border-color: black;
+}
+
 .mbn-item {
   width: 280px;
   margin-right: 24px;
@@ -139,6 +142,9 @@
   background-color: #fff;
   padding: 24px;
   display: none;
+}
+.mbn-image .text.active {
+  display: block;
 }
 
 .mbn-image .text h4 {
@@ -169,23 +175,6 @@
   background-repeat: no-repeat;
   background-color: red;
 }
-
-/* .slick-dots {
-}
-
-.slick-dots .li button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 1920px;
-  height: 2px;
-  background-color: red;
-  z-index: 100;
-}
-
-.slick-dots button::before {
-  display: none;
-} */
 
 .page {
   display: none;
@@ -230,6 +219,10 @@
   margin-top: 16px;
 }
 
+.main-new .new-items .box .left li.active {
+  font-weight: 700;
+}
+
 .main-new .new-items .box .left li:first-child {
   margin-top: 0;
 }
@@ -237,14 +230,11 @@
 .main-new .new-items .box .right {
   width: calc(100% - 326px);
   padding: 0 72px;
+  position: relative;
 }
 
-.main-new .new-items .box .right .items .f_slide {
+.main-new .new-items .box .right .items {
   display: flex;
-}
-
-.main-new .new-items .box .right .items .b_slide {
-  display: none;
 }
 
 .main-new .new-items .box .right .items .item {
@@ -252,12 +242,7 @@
   width: 100%;
 }
 
-.main-new .new-items .box .right .items {
-  width: 100%;
-  display: block;
-}
-
-.main-new .new-items .box .right .items .pt .photo {
+.main-new .new-items .box .right .items .photo {
   width: 246px;
   display: flex;
   position: relative;
@@ -296,30 +281,87 @@
   font-weight: 700;
 }
 
+.main-new .arrow {
+  width: 100%;
+  height: 100%;
+}
+
+.main-new .arrow .next-new {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+}
+
+.main-new .arrow .prev-new {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.main-new .arrow img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.main-new .arrow img:hover {
+  opacity: 0.6;
+}
+
 /* banner */
 .banner {
   margin-left: 50px;
   margin-right: 50px;
   max-width: 1800px;
-  min-width: 1320px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 140px;
+  height: 100%;
+  position: relative;
 }
 
-.main-banner .banner-image {
+.banner-inner {
+  overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-.main-banner .banner-image a {
-  max-width: 1800px;
+.banner .slick-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-.main-banner .banner-image a img {
+.banner a img {
+  width: 100%;
+  height: 100%;
   display: block;
-  width: 100%;
-  height: 100%;
+  object-fit: cover;
+}
+
+.banner .slick-prev {
+  left: 10px;
+  z-index: 20;
+}
+
+.banner .slick-prev::before {
+  font-size: 40px;
+}
+
+.banner .slick-next {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner .slick-next::before {
+  color: inherit;
 }
 
 /* main-best */
@@ -352,7 +394,7 @@
   font-size: 22px;
 }
 
-.best-contents .top li a.on {
+.best-contents .top li.on {
   font-weight: 700;
 }
 
@@ -369,43 +411,15 @@
 }
 
 .slick-prev {
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  z-index: 1;
-  transform: translateY(-50%);
-  background-color: inherit;
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: url("../images/left_arrow.png");
-  background-size: 500px auto;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .slick-prev::before {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .slick-next {
-  position: absolute;
-  top: 50%;
-  right: 24px;
-  z-index: 1;
-  transform: translateY(-50%);
-  background-color: inherit;
-  display: block;
-  width: 32px;
-  height: 32px;
-  background-image: url("../images/angle\ right\ b.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .slick-next::after {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .main-best .bottom-items .items {
@@ -420,17 +434,19 @@
   width: 100%;
 }
 
+.main-best .bottom-items .items .photo .front a:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-best .bottom-items .items .photo .front a:last-child {
+  opacity: 0;
+}
+
 .main-best .bottom-items .items .photo img {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.best-contents .bottom-items .items .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
 }
 
 .main-best .bottom-items .items .text_box {

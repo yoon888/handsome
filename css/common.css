@@ -37,6 +37,7 @@ body {
   font-family: "Noto Sans KR", sans-serif, "Apple SD Gothic Neo";
   font-weight: 400;
   margin: 0 auto;
+  position: relative;
 }
 
 /* header */
@@ -51,6 +52,10 @@ body {
   position: absolute;
   top: 0;
   /* background-color: #ddd; */
+}
+
+.header.active {
+  background-color: #fff;
 }
 /* left: 0; */
 .header-wrap {
@@ -88,7 +93,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .hb-left {
@@ -133,21 +137,36 @@ body {
 }
 
 .hb-left-category {
-  display: flex;
   position: absolute;
-  top: 64px;
+  top: calc(100%);
   left: 0;
   background-color: #fff;
-  display: none;
+  display: block;
+  width: 100%;
+  display: flex;
+  max-height: 960px;
+}
+
+.hb-left-category > li {
+  max-width: 1920px;
+  /* height: 100%; */
+  margin-top: 40px;
+  font-weight: 700;
+  display: block;
+  margin: 20px 40px;
 }
 
 .hb-left-category > li > a {
-  display: block;
-  margin: 20px 30px;
+  padding: 20px;
 }
 
-.hb-left li ul li ul {
-  display: none;
+.hb-left li ul li {
+  height: 100%;
+}
+
+.hb-left li ul li a {
+  display: block;
+  padding: 10px;
 }
 
 .hb-right {

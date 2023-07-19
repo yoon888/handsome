@@ -235,11 +235,26 @@
 
 .main-new .new-items .box .right .items {
   display: flex;
+  overflow: hidden;
+}
+
+.main-new .new-items .box .right .items .main-new-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-new .new-items .box .right .items .item {
   margin-right: 24px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-new .new-items .box .right .items .item .f_photo {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-new .new-items .box .right .items .photo {
@@ -248,34 +263,39 @@
   position: relative;
 }
 
-.main-new .new-items .box .right .photo img {
+.main-new .new-items .box .right .item .photo img {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.main-new .new-items .box .right .photo .b_photo {
+.main-new .new-items .box .right .item .photo .f_photo .back {
   position: absolute;
   top: 0;
   left: 0;
   display: none;
 }
 
-.main-new .new-items .box .right .items .item .text {
+.main-new .new-items .box .right .items .text {
+  position: absolute;
+  bottom: 0;
   padding-top: 16px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: block;
 }
 
-.main-new .new-items .box .right .items .item .text h4 {
+.main-new .new-items .box .right .items .text h4 {
   font-size: var(--brandname-02);
   font-weight: 700;
 }
-.main-new .new-items .box .right .items .item .text h3 {
+.main-new .new-items .box .right .items .text h3 {
   font-size: var(--name-03);
   margin-top: 2px;
   font-weight: 400;
 }
-.main-new .new-items .box .right .items .item .text p {
+.main-new .new-items .box .right .items .text p {
   font-size: var(--price-04);
   margin-top: 8px;
   font-weight: 700;
@@ -312,7 +332,6 @@
 .main-new .arrow img:hover {
   opacity: 0.6;
 }
-
 /* banner */
 .banner {
   margin-left: 50px;

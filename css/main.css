@@ -123,15 +123,22 @@
   margin-right: 24px;
 }
 
-.mbn-image img {
+.mbn-item img {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.mbn-image .bottom {
+.mbn-image {
   position: relative;
-  margin-top: 24px;
+}
+
+.mbn-image-b {
+  position: relative;
+}
+
+.mbn-image .top {
+  /* margin-top: 24px; */
 }
 
 .mbn-image .text {
@@ -143,29 +150,88 @@
   padding: 24px;
   display: none;
 }
-.mbn-image .text.active {
+
+.mbn-image-b .text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: #fff;
+  padding: 24px;
+  display: none;
+}
+
+.mbn-image .top .text.active {
   display: block;
 }
 
-.mbn-image .text h4 {
+.mbn-image-b .bottom .text.active {
+  display: block;
+}
+
+.mbn-image .top .text h4 {
   font-size: var(--brandname-02);
   margin-top: 2px;
   font-weight: 700;
 }
 
-.mbn-image .bottom .text h3 {
+.mbn-image .top .text h3 {
   margin-top: 2px;
   font-size: var(--name-03);
   font-weight: 400;
 }
 
-.mbn-image .bottom .text p {
+.mbn-image .top .text p {
   margin-top: 8px;
   font-size: var(--price-04);
   font-weight: 700;
 }
 
-.mbn-image .bottom .text a {
+.mbn-image .top .text a {
+  margin-top: 24px;
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background-image: url("../images/Arrow\ 1.png");
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+  background-color: red;
+}
+
+.mbn-image-b .bottom {
+  position: relative;
+  margin-top: 24px;
+}
+
+.mbn-image-b .bottom .text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: #fff;
+  padding: 24px;
+  display: none;
+}
+
+.mbn-image-b .bottom .text h4 {
+  font-size: var(--brandname-02);
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.mbn-image-b .bottom .text h3 {
+  margin-top: 2px;
+  font-size: var(--name-03);
+  font-weight: 400;
+}
+
+.mbn-image-b .bottom .text p {
+  margin-top: 8px;
+  font-size: var(--price-04);
+  font-weight: 700;
+}
+
+.mbn-image-b .bottom .text a {
   margin-top: 24px;
   display: inline-block;
   width: 18px;
@@ -238,28 +304,15 @@
   overflow: hidden;
 }
 
-.main-new .new-items .box .right .items .main-new-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .main-new .new-items .box .right .items .item {
   margin-right: 24px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
 }
 
 .main-new .new-items .box .right .items .item .f_photo {
-  display: flex;
-  flex-direction: column;
-}
-
-.main-new .new-items .box .right .items .photo {
-  width: 246px;
-  display: flex;
   position: relative;
 }
 
@@ -269,20 +322,27 @@
   height: 100%;
 }
 
-.main-new .new-items .box .right .item .photo .f_photo .back {
+.main-new .new-items .box .right .item .photo .f_photo #back {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   display: none;
 }
 
-.main-new .new-items .box .right .items .text {
-  position: absolute;
-  bottom: 0;
+.main-new .new-items .box .right .item .photo .f_photo #back.active {
+  display: block;
+}
+
+.main-new .new-items .box .right .item .photo .f_photo #back img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.main-new .new-items .box .right .items .item .text {
   padding-top: 16px;
   text-align: center;
-  align-items: center;
-  justify-content: center;
   display: block;
 }
 
@@ -418,59 +478,47 @@
 }
 
 .best-contents .bottom {
+  max-width: 1800px;
 }
 
 .best-contents .bottom-items {
   display: flex;
+  max-width: 1800px;
   overflow: hidden;
 }
 
 .best-contents .bottom-items .photo {
   position: relative;
+  /* width: 280px; */
 }
 
-.slick-prev {
+.best-contents .bottom-items .photo #last {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }
 
-.slick-prev::before {
-}
-
-.slick-next {
-}
-
-.slick-next::after {
+.best-contents .bottom-items .photo .front #last.active {
+  display: block;
 }
 
 .main-best .bottom-items .items {
-  display: block;
   margin-right: 24px;
   position: relative;
   width: 280px;
   height: 100%;
 }
-.main-best .bottom-items .items .photo {
-  display: block;
-  width: 100%;
-}
-
-.main-best .bottom-items .items .photo .front a:first-child {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.main-best .bottom-items .items .photo .front a:last-child {
-  opacity: 0;
-}
 
 .main-best .bottom-items .items .photo img {
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 .main-best .bottom-items .items .text_box {
   padding-top: 16px;
   text-align: center;
+  width: 100%;
 }
 
 .main-best .bottom-items .items .text_box h4 {
@@ -513,9 +561,6 @@
   max-width: 1800px;
 }
 
-.main-contents .slide-item {
-}
-
 .main-contents h2 {
   font-size: var(--title-01);
   font-weight: 400;
@@ -527,68 +572,36 @@
 }
 
 .main-contents .new-contents .slide {
-  height: 936px;
+  height: 100%;
   width: 100%;
-  position: relative;
+  display: block;
 }
 
 .main-contents .new-contents .slide-item {
   display: flex;
-  width: 100%;
+  gap: 24px;
+}
+
+.main-contents .new-contents .slide-item .item {
+  flex: 1;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.main-contents .new-contents .slide-item .item_1 {
-  margin-right: 24px;
-  width: 584px;
-  height: 936px;
-  position: relative;
-}
-
-.main-contents .new-contents .slide-item .item_2 {
-  width: 584px;
-  height: 936px;
-  position: relative;
-  height: 100%;
-}
-
-.main-contents .new-contents .slide-item .item_3 {
-  margin-left: 24px;
-  position: relative;
-  width: 584px;
-  height: 936px;
-}
-
-.main-contents .new-contents .slide-item .item_1 .photo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-right: 24px;
-}
-
-.main-contents .new-contents .slide-item .item_2 .photo {
-  position: absolute;
-  top: 0;
-  left: -42px;
-  right: -42px;
-  display: block;
-  margin-right: 24px;
-}
-
-.main-contents .new-contents .slide-item .item_3 .photo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
+.main-contents .new-contents .slide-item .item .photo {
+  overflow: hidden;
 }
 
 .main-contents .new-contents .slide-item .photo img {
-  display: block;
   width: 100%;
   height: 100%;
+  transition: all 0.2s linear;
+}
+
+.main-contents .new-contents .slide-item .photo img:hover {
+  transform: scale(1.2);
 }
 
 .main-contents .new-contents .slide-item .text_box {

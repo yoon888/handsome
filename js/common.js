@@ -13,15 +13,6 @@ $(function () {
     }
   );
 
-  $(".hb-left").hover(
-    function () {
-      $(".hb-left li ul").stop().slideDown("fast");
-    },
-    function () {
-      $(".hb-left-category").stop().slideUp("fast");
-    }
-  );
-
   //slider
   $(".slide-image").slick({
     items: 5,
@@ -41,28 +32,39 @@ $(function () {
     }
   );
 
-  //main-brand
+  // main-brand;
   $(".mbn-slide").slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 6,
     slidesToScroll: 6,
     arrows: false,
     dots: true,
   });
 
-  var mbitem = $(".main-brand .bottom img");
-  console.log(mbitem);
+  $(".mbn-slide .mbn-item .mbn-image-b").hover(
+    function () {
+      var idx = $(".mbn-slide .mbn-item .mbn-image-b").index(this);
+      $(".mbn-slide .mbn-item .mbn-image-b .text").eq(idx).addClass("active");
+    },
+    function () {
+      var idx = $(".mbn-slide .mbn-item .mbn-image-b").index(this);
+      $(".mbn-slide .mbn-item .mbn-image-b .text")
+        .eq(idx)
+        .removeClass("active");
+    }
+  );
 
-  $(".main-brand .bottom")
-    .eq(idx)
-    .hover(
-      function () {
-        $(".main-brand .bottom > .text").eq(idx).css("display", "block");
-      },
-      function () {
-        $(".main-brand .bottom > .text").eq(idx).css("display", "none");
-      }
-    );
+  $(".mbn-slide .mbn-item .mbn-image").hover(
+    function () {
+      var idx = $(".mbn-slide .mbn-item .mbn-image").index(this);
+      console.log(idx);
+      $(".mbn-slide .mbn-item .mbn-image .text").eq(idx).addClass("active");
+    },
+    function () {
+      var idx = $(".mbn-slide .mbn-item .mbn-image").index(this);
+      $(".mbn-slide .mbn-item .mbn-image .text").eq(idx).removeClass("active");
+    }
+  );
 
   //main-new
   $(".main-new .left li").eq(0).addClass("active");
@@ -79,7 +81,7 @@ $(function () {
   });
 
   $(".main-new .items").slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 5,
     slidesToScroll: 5,
     arrows: false,
@@ -87,14 +89,6 @@ $(function () {
   });
 
   //banner
-  $(".banner-inner").slick({
-    infinite: true,
-    speed: 300,
-    autoplay: true,
-    dots: true,
-    nextArrow: $(".next-new"),
-    prevArrow: $(".prev-new"),
-  });
 
   //main-best
   $(".main-best .top li").eq(0).addClass("on");
@@ -110,9 +104,22 @@ $(function () {
     $(".bottom-items").eq(idx).show(idx);
   });
 
-  $(".bottom-items").slick({
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 6,
-  });
+  // $(".main-best .bottom .photo img").hover(
+  //   function () {
+  //     var idx = $(".main-best .bottom .photo front").index(this);
+  //     $(".main-best .bottom .photo front:first").eq(idx).css("display", "none");
+  //     $(".main-best .bottom .photo front:first:last")
+  //       .eq(idx)
+  //       .css("display", "block");
+  //   },
+  //   function () {
+  //     var idx = $(".main-best .bottom .photo front").index(this);
+  //     $(".main-best .bottom .photo front:first")
+  //       .eq(idx)
+  //       .css("display", "block");
+  //     $(".main-best .bottom .photo front:first:last")
+  //       .eq(idx)
+  //       .css("display", "none");
+  //   }
+  // );
 });

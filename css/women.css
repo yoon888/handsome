@@ -2,47 +2,69 @@
   display: block;
 }
 
-.select-box {
-  margin-top: 40px;
-  position: relative;
+.header-head {
+  padding: 0;
+}
+.header-body {
+  padding: 0;
+}
+
+.main-img {
+  height: 100%;
+}
+
+.select {
+  margin: 20px 0;
+}
+
+.women li .button {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 14px;
+  align-items: center;
+}
+
+.women .button .button-img {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.women .button .button-img img {
+  display: block;
+}
+
+.select li ul {
+  display: flex;
+  background: #fbfbfb;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  display: none;
+}
+
+.select li ul li {
+  margin-right: 20px;
 }
 
 .category {
-  position: relative;
+  border-top: 1px solid #f0f0f0;
+  align-items: center;
+  text-align: center;
 }
 
-.category ul::before {
-  position: absolute;
-  content: "";
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ddd;
-}
-
-.category ul {
+.category .bottom-menu {
   display: flex;
   margin-top: 20px;
 }
 
-.category ul li {
+.category .bottom-menu li {
   margin-right: 10px;
-  position: relative;
+  cursor: pointer;
 }
-
-.category ul li:last-child::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  transform: translateY(-50%);
-  right: -5px;
-  width: 5px;
-  height: 5px;
-  background: #1c47df;
-  display: block;
-  border-radius: 50%;
-  overflow: hidden;
+.category .bottom-menu li.on {
+  font-weight: 700;
 }
 
 .category-2 .sort-wrap {
@@ -50,6 +72,22 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+  height: 66px;
+  border-bottom: 1px solid #111;
+}
+
+.category-2 .sort-wrap .filter {
+  display: flex;
+}
+
+.category-2 .sort-wrap .filter .image {
+  background-image: url("../images/filter.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  margin-left: 8px;
 }
 
 .category-2 .sort-wrap ul {
@@ -57,27 +95,185 @@
 }
 
 .category-2 .sort-wrap ul li {
-  margin-left: 16px;
+  margin-left: 12px;
 }
 
 .count-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 16px;
-  position: relative;
+  margin-top: 20px;
+  height: 30px;
+  max-width: 1920px;
 }
 
-.count-wrap::before {
-  position: absolute;
-  content: "";
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ddd;
+.count-wrap {
+  color: #707070;
 }
 
 .layout-button {
   display: flex;
+}
+
+.layout-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.layout-button img:last-child {
+  margin-left: 6px;
+}
+
+/* main-image */
+.main-image {
+  max-width: 1800px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.women-image {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img1 {
+  width: calc(25% - 18px);
+  height: 100%;
+  margin-top: 40px;
+}
+
+.img1-1 {
+  width: calc(25% - 18px);
+  height: 100%;
+  margin-left: 24px;
+  margin-top: 40px;
+}
+
+.img2 {
+  width: calc(33.333333% - 16px);
+  margin-top: 40px;
+  height: 100%;
+}
+
+.img2-1 {
+  width: calc(33.333333% - 16px);
+  margin-top: 40px;
+  margin-left: 24px;
+  height: 100%;
+}
+
+.women-img > li {
+  padding: 5px;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+.women-image li .img-f {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.women-image li .img-f img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.img-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.main-image .women-image .images {
+  position: relative;
+}
+
+.women-image .images .text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: #fff;
+  padding: 24px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.women-image .images .text .color {
+  display: flex;
+  justify-content: space-between;
+}
+
+.women-image .images .text .product {
+  margin-top: 10px;
+}
+
+.women-image .images .text .size {
+  display: flex;
+  margin-top: 8px;
+}
+
+.women-image .images .text .size p {
+  margin-right: 16px;
+}
+
+.women-image .images .text .size p:last-child {
+  margin-right: 0;
+}
+
+.women-image .images .text .flag {
+  height: 18px;
+  margin-top: 14px;
+  display: flex;
+}
+.info .left p {
+  color: #707070;
+}
+
+.women-image li .info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.icon {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+
+.heart_icon {
+  width: 24px;
+  height: 24px;
+}
+
+.heart_icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.paging a {
+  padding: 0 6px;
+}
+
+.paging img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }

@@ -959,23 +959,18 @@
   $(".category .bottom-menu li").click(function () {
     $(".category .bottom-menu li").removeClass("on");
     $(this).addClass("on");
-
-    $(".main-image").hide();
-
-    var idx = $(this).index();
-    $(".main-image").eq(idx).show(idx);
   });
 
   $(".main-image .all .women-image li .images").hover(
     function () {
       var idx = $(".main-image .all .women-image li .images").index(this);
-      $(".main-image .all .women-image li .images .text").eq(idx).animate({opacity : 1});
+      $(".main-image .all .women-image li .images .text").eq(idx).animate({opacity : 1},300);
     },
     function () {
       var idx = $(".main-image .all .women-image li .images").index(this);
       $(".main-image .all .women-image li .images .text")
         .eq(idx)
-        .animate({opacity : 0});
+        .animate({opacity : 0},300);
     }
   );
 

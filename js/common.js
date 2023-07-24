@@ -74,7 +74,8 @@ $(function () {
     infinite: false,
     slidesToShow: 5,
     slidesToScroll: 5,
-    arrows: true,
+    nextArrow: $(".next"),
+    prevArrow: $(".prev"),
     dots: false,
   });
 

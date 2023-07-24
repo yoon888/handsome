@@ -16,21 +16,11 @@ $(function () {
   //slider
   $(".slide-image").slick({
     items: 5,
-    nextArrow: $(".next"),
-    prevArrow: $(".prev"),
+    arrows: true,
     dots: true,
     autoplay: true,
     autoplaySpeed: 5000,
   });
-
-  $(".main .slide img").hover(
-    function () {
-      $(".main .arrows").stop().show();
-    },
-    function () {
-      $(".main .arrows img").stop().hide();
-    }
-  );
 
   // main-brand;
   $(".mbn-slide").slick({
@@ -84,7 +74,7 @@ $(function () {
     infinite: false,
     slidesToShow: 5,
     slidesToScroll: 5,
-    arrows: false,
+    arrows: true,
     dots: false,
   });
 

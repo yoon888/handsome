@@ -2,25 +2,16 @@ $(function () {
   $(".header").load("../inc/header.html");
   $(".footer").load("../inc/footer.html");
 
-  $(".header").hover(
-    function () {
-      $(".header-trans").css("display", "block");
-      $(".header-wrap").css("display", "none");
-    },
-    function () {
-      $(".header-trans").css("display", "none");
-      $(".header-wrap").css("display", "block");
-    }
-  );
-
-  $(".header-body .hb-left > li").hover(
-    function () {
-      $(".hb-left-category > li").css("display", "block");
-    },
-    function () {
-      $(".hb-left-category > li").css("display", "none");
-    }
-  );
+  // $(".header").hover(
+  //   function () {
+  //     $(".header-trans").css("display", "block");
+  //     $(".header-wrap").css("display", "none");
+  //   },
+  //   function () {
+  //     $(".header-trans").css("display", "none");
+  //     $(".header-wrap").css("display", "block");
+  //   }
+  // );
 
   //slider
   $(".slide-image").slick({

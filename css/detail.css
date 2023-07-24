@@ -1,0 +1,219 @@
+.content-wrap {
+  width: 1200px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.detail {
+  display: flex;
+}
+
+.photo-detail {
+  display: flex;
+  width: 600px;
+  height: 800px;
+}
+
+.photo-detail .left {
+  width: 100%;
+  /* width: 70px;
+  height: 800px; */
+}
+
+.photo-detail .left .container {
+  width: 100%;
+  height: 100%;
+  /* width: 70px;
+  height: 672px; */
+}
+
+.photo-detail .left .wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 0 0;
+}
+
+.photo-detail .left .wrapper .slide {
+  height: 70px;
+  margin-bottom: 10px;
+  width: 70px;
+}
+.photo-detail .left .wrapper .slide img {
+  width: 50px;
+  height: 100%;
+  display: block;
+}
+
+.photo-detail .left .slick-track {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-detail .right {
+  position: relative;
+  width: 100%;
+}
+
+.photo-detail .right .container {
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.photo-detail .right .container .wrapper2 {
+  display: flex;
+  width: 530px;
+  height: 100%;
+}
+
+.photo-detail .right .container .wrapper2 .slide {
+  width: 530px;
+  height: 100%;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+
+.photo-detail .right .container .wrapper2 .slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* menu-detail */
+.menu-detail {
+  width: 600px;
+  padding-left: 60px;
+}
+
+.menu-detail .top-title,
+.top-info {
+  padding: 34px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-detail .top-title .category {
+  display: flex;
+}
+
+.menu-detail .top-title .category li::before {
+  content: "";
+  background-image: url("../images/detail-arrow-right.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin: 0 4px;
+}
+.menu-detail .top-title .category li:first-child:before {
+  display: none;
+}
+
+.menu-detail .top-title .category li:first-child {
+  font-weight: 700;
+}
+
+.menu-detail .top-title .category li:last-child {
+  text-decoration: underline;
+}
+
+.menu-detail .top-title .name {
+  margin-top: 9px;
+  align-items: center;
+}
+
+.menu-detail .top-title .price {
+  margin-top: 14px;
+  align-items: center;
+}
+
+.menu-detail .top-title .sku {
+  margin-top: 18px;
+  color: #707070;
+}
+
+.menu-detail .top-info-price {
+  padding: 34px 0;
+}
+
+.name h3 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.price {
+  display: flex;
+}
+
+.price p {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.price span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.price button::before {
+  border-radius: inherit;
+  bottom: 0;
+  color: inherit;
+  content: "";
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s;
+}
+
+.last {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.last .comment {
+  display: flex;
+  align-items: center;
+}
+
+.last .comment p {
+  margin-left: 8px;
+}
+
+.coupon {
+  max-width: 96px;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+}
+
+.top-info1,
+.top-info2 {
+  display: flex;
+}
+
+.top-info1 p,
+.top-info2 p {
+  width: 73px;
+}
+
+.top-info1 table tr:first-child,
+.top-info2 table tr:first-child {
+  margin-top: 0;
+}
+.top-info1 table tr,
+.top-info2 table tr {
+  margin-top: 6px;
+  width: 96px;
+}
+
+.top-info1 table tr td,
+.top-info2 table tr td {
+  padding-right: 12px;
+}

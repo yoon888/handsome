@@ -45,26 +45,30 @@ body {
   max-width: 1920px;
   width: 100%;
   align-items: center;
-  background-color: inherit;
+  background-color: transparent;
   height: 136px;
   position: absolute;
   top: 0;
   z-index: 1;
-
-  /* background-color: #ddd; */
 }
-.header-trans {
+
+.header-main-wh {
+  height: -136px;
   background-color: #fff;
-  display: none;
-  max-width: 1920px;
 }
 
-.header-trans .hb-left li a {
-  color: #111;
+.header-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.header-trans .hb-right li a {
-  color: #111;
+.header-head a {
+  background: url("../images/header-logo.svg");
+  width: 200px;
+  height: 24px;
+  filter: invert(1);
 }
 
 .header-head {
@@ -77,8 +81,10 @@ body {
 }
 
 .header-head img {
-  width: 200px;
-  height: 24px;
+}
+
+.blank {
+  display: none;
 }
 
 .header-btns {
@@ -86,12 +92,29 @@ body {
   justify-content: flex-end;
 }
 
-.header-btns a img {
+.header-btns a:nth-child(1) {
+  background: url("../images/common-icon.svg") 0 0;
+}
+.header-btns a:nth-child(2) {
+  background: url("../images/common-icon.svg") 0 -50px;
+}
+.header-btns a:nth-child(3) {
+  background: url("../images/common-icon.svg") -100px -50px;
+}
+.header-btns a:nth-child(4) {
+  background: url("../images/common-icon.svg") -200px 0;
+}
+.header-btns a:nth-child(5) {
+  background: url("../images/네모.svg");
+}
+
+.header-btns a {
   display: block;
-  object-fit: cover;
   width: 24px;
   height: 24px;
   margin-left: 16px;
+  background-repeat: no-repeat;
+  filter: invert(1);
 }
 
 .header-body {
@@ -229,13 +252,31 @@ body {
 }
 
 .footer-wrap .top .sns_icon {
-  width: 300px;
+  width: 200px;
+  display: flex;
 }
 
-.footer-wrap .top .sns_icon img {
-  width: 70%;
-  height: 70%;
+.footer-wrap .top .sns_icon a {
+  background-repeat: no-repeat;
   display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.footer-wrap .top .sns_icon a:nth-child(1) {
+  background: url("../images/common-icon.svg") -150px -50px;
+}
+.footer-wrap .top .sns_icon a:nth-child(2) {
+  margin-left: 16px;
+  background: url("../images/common-icon.svg") -200px -50px;
+}
+.footer-wrap .top .sns_icon a:nth-child(3) {
+  margin-left: 16px;
+  background: url("../images/common-icon.svg") -250px -50px;
+}
+.footer-wrap .top .sns_icon a:nth-child(4) {
+  margin-left: 16px;
+  background: url("../images/common-icon.svg") -300px -50px;
 }
 
 .footer-wrap .bottom {
@@ -284,6 +325,10 @@ body {
 }
 
 .fullpage {
+  display: none;
+}
+
+.blank {
   display: none;
 }
 

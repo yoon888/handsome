@@ -420,23 +420,6 @@
   object-fit: cover;
 }
 
-.banner .slick-prev {
-  left: 10px;
-  z-index: 20;
-}
-
-.banner .slick-prev::before {
-  font-size: 40px;
-}
-
-.banner .slick-next {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.banner .slick-next::before {
-  color: inherit;
-}
-
 /* main-best */
 
 .main-best {

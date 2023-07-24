@@ -1,4 +1,5 @@
 /* main */
+
 .main {
   flex: 1;
   display: block;
@@ -418,6 +419,19 @@
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+.banner .slick-prev,
+.banner .slick-next {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 60px;
+  height: 60px;
+}
+
+.banner .slick-prev::before,
+.banner .slick-next::before {
+  font-size: 32px;
+  color: #fff;
 }
 
 /* main-best */

@@ -13,6 +13,15 @@ $(function () {
     }
   );
 
+  $(".header-body .hb-left > li").hover(
+    function () {
+      $(".hb-left-category > li").css("display", "block");
+    },
+    function () {
+      $(".hb-left-category > li").css("display", "none");
+    }
+  );
+
   //slider
   $(".slide-image").slick({
     items: 5,

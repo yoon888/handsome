@@ -14,45 +14,48 @@ $(function () {
   // );
 
   //slider
-  $(".slide-image").slick({
-    items: 5,
-    arrows: true,
+  $(".slide_01").slick({
     dots: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
+    prevArrow: $(".xi-angle-left-thin"),
+    nextArrow: $(".xi-angle-right-thin"),
   });
 
   // main-brand;
-  $(".mbn-slide").slick({
-    infinite: false,
-    slidesToShow: 6,
-    slidesToScroll: 6,
-    arrows: false,
-    dots: true,
-  });
+  // $(".mbn-slide").slick({
+  //   infinite: false,
+  //   slidesToShow: 6,
+  //   slidesToScroll: 6,
+  //   arrows: false,
+  //   dots: true,
+  // });
+  // var swiper = new Swiper(".mbn-slide", {
+  //   slidesPerView: 6,
+  //   spaceBetween: 20,
+  //   scrollbar: {
+  //     el: ".swiper-scrollbar",
+  //   },
+  // });
 
-  $(".mbn-slide .mbn-item .mbn-image-b").hover(
+  $(".slide_02 .item .mbn-image-b").hover(
     function () {
-      var idx = $(".mbn-slide .mbn-item .mbn-image-b").index(this);
-      $(".mbn-slide .mbn-item .mbn-image-b .text").eq(idx).addClass("active");
+      var idx = $(".slide_02 .item .mbn-image-b").index(this);
+      $(".slide_02 .item .mbn-image-b .text").eq(idx).addClass("active");
     },
     function () {
-      var idx = $(".mbn-slide .mbn-item .mbn-image-b").index(this);
-      $(".mbn-slide .mbn-item .mbn-image-b .text")
-        .eq(idx)
-        .removeClass("active");
+      var idx = $(".slide_02 .item .mbn-image-b").index(this);
+      $(".slide_02 .item .mbn-image-b .text").eq(idx).removeClass("active");
     }
   );
 
-  $(".mbn-slide .mbn-item .mbn-image").hover(
+  $(".slide_02 .item .mbn-image").hover(
     function () {
-      var idx = $(".mbn-slide .mbn-item .mbn-image").index(this);
+      var idx = $(".slide_02 .item .mbn-image").index(this);
       console.log(idx);
-      $(".mbn-slide .mbn-item .mbn-image .text").eq(idx).addClass("active");
+      $(".slide_02 .item .mbn-image .text").eq(idx).addClass("active");
     },
     function () {
-      var idx = $(".mbn-slide .mbn-item .mbn-image").index(this);
-      $(".mbn-slide .mbn-item .mbn-image .text").eq(idx).removeClass("active");
+      var idx = $(".slide_02 .item .mbn-image").index(this);
+      $(".slide_02 .item .mbn-image .text").eq(idx).removeClass("active");
     }
   );
 

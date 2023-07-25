@@ -106,6 +106,7 @@ body {
 }
 .header-btns a:nth-child(5) {
   background: url("../images/네모.svg");
+  text-align: center;
 }
 
 .header-btns a {

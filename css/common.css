@@ -32,7 +32,7 @@ body {
   max-width: 1920px;
   /* background-color: #ccc; */
   color: #111;
-  font-style: 16px;
+  font-size: 14px;
   line-height: 1.5;
   font-family: "Noto Sans KR", sans-serif, "Apple SD Gothic Neo";
   font-weight: 400;
@@ -52,7 +52,14 @@ body {
   z-index: 1;
 }
 
-.header-main-wh {
+.header-wrap-inner {
+  max-width: 1800px;
+  min-width: 1320px;
+  height: 136px;
+  margin: 0 50px;
+}
+
+/* .header-main-wh {
   height: -136px;
   background-color: #fff;
 }
@@ -69,7 +76,7 @@ body {
   width: 200px;
   height: 24px;
   filter: invert(1);
-}
+} */
 
 .header-head {
   padding: 0 50px;
@@ -80,7 +87,13 @@ body {
   height: 72px;
 }
 
-.header-head img {
+.header-head .header-logo {
+  width: 200px;
+  height: 24px;
+  background-image: url("../images/header-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .blank {

@@ -1,16 +1,12 @@
-.header-trans {
+.header {
+  position: inherit;
+  height: 136px;
   display: block;
 }
 
-.header-head {
-  padding: 0;
-}
+.header-head,
 .header-body {
   padding: 0;
-}
-
-.main-img {
-  height: 100%;
 }
 
 .select {

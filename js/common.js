@@ -2,17 +2,6 @@ $(function () {
   $(".header").load("../inc/header.html");
   $(".footer").load("../inc/footer.html");
 
-  // $(".header").hover(
-  //   function () {
-  //     $(".header-trans").css("display", "block");
-  //     $(".header-wrap").css("display", "none");
-  //   },
-  //   function () {
-  //     $(".header-trans").css("display", "none");
-  //     $(".header-wrap").css("display", "block");
-  //   }
-  // );
-
   //slider
   $(".slide_01").slick({
     dots: true,

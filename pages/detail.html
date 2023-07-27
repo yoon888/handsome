@@ -16,9 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/women.css" />
     <link rel="stylesheet" href="../css/detail.css" />
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -28,7 +26,7 @@
     <script src="../js/common.js"></script>
   </head>
   <body>
-    <div class="heaer-wrap-inner"></div>
+    <div class="header"></div>
 
     <div class="main">
       <div class="content-wrap">
@@ -38,22 +36,22 @@
               <div class="container">
                 <div class="wrapper">
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-1.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/10-1.png" alt="" />
+                    <img src="../images/detail-main-2.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/10-1-b.png" alt="" />
+                    <img src="../images/detail-main-3.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-4.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-5.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-6.jpg" alt="" />
                   </div>
                 </div>
               </div>
@@ -64,22 +62,22 @@
               <div class="container">
                 <div class="wrapper2">
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-1.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/10-1.png" alt="" />
+                    <img src="../images/detail-main-2.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/10-1-b.png" alt="" />
+                    <img src="../images/detail-main-3.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-4.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-5.jpg" alt="" />
                   </div>
                   <div class="slide">
-                    <img src="../images/detail-main.png" alt="" />
+                    <img src="../images/detail-main-6.jpg" alt="" />
                   </div>
                 </div>
               </div>
@@ -660,6 +658,39 @@
 
     <div class="footer"></div>
 
-    <script></script>
+    <div class="dimm"></div>
+    <div class="modal">
+      <div class="modal-pu">
+        <div class="icon">
+          <i></i>
+        </div>
+        <p>품번이 복사되었습니다.</p>
+        <button class="btn_close">확인</button>
+      </div>
+    </div>
+
+    <script>
+      $(".wrapper2").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".wrapper",
+        // $(".wrapper2 .slide").on(
+        //   "afterChange",
+        //   function (event, slick, currentSlide) {
+        //     console.log(currentSlide);
+        //   }
+        // );
+      });
+      $(".wrapper").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        asNavFor: ".wrapper2",
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+      });
+    </script>
   </body>
 </html>

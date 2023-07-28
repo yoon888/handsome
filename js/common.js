@@ -43,6 +43,7 @@ $(function () {
     $(".right .items").hide();
 
     var idx = $(this).index();
+    console.log(idx);
     $(".right .items").eq(idx).show(idx);
   });
 

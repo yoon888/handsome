@@ -259,6 +259,10 @@ body {
   margin: 160px 0 0;
   border-top: 1px solid #000;
   background-color: #fff;
+  white-space: nowrap;
+}
+
+.footer ul li {
 }
 
 .footer-wrap {

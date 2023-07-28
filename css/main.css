@@ -167,9 +167,9 @@
   font-weight: 700;
 }
 
-.mbn-image .top .text a {
+.mbn-image .top .text .link {
   margin-top: 24px;
-  display: inline-block;
+  display: block;
   width: 18px;
   height: 18px;
   background: url("../images/common-icon-18.svg") -350px -100px;
@@ -194,7 +194,7 @@
   font-weight: 700;
 }
 
-.mbn-image-b .bottom .text a {
+.mbn-image-b .bottom .text .link {
   margin-top: 24px;
   display: inline-block;
   width: 18px;
@@ -576,7 +576,7 @@
   margin-right: 50px;
   margin-top: 140px;
   max-width: 1800px;
-  width: 1320px;
+  /* width: 1320px; */
 }
 
 .main-contents h2 {
@@ -584,55 +584,94 @@
   font-weight: 400;
 }
 
-.main-contents .new-contents {
+.mc-slide {
   margin-top: 32px;
-  /* width: 100%; */
-}
-
-.main-contents .new-contents .slide {
-  height: 100%;
-  width: 100%;
-  display: block;
-  overflow: hidden;
-}
-
-.main-contents .new-contents .slide-item {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
+  overflow: hidden;
+  position: relative;
 }
 
-.main-contents .new-contents .slide-item .item {
-  width: 424px;
-  margin-right: 24px;
-  height: 936px;
-  /* flex: 1;
+.mc-slide-contents {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; */
 }
 
-.main-contents .new-contents .slide-item .item .photo {
+.mc-slide .slide {
+  margin-right: 24px;
   overflow: hidden;
 }
 
-.main-contents .new-contents .slide-item .photo img {
-  width: 100%;
-  height: 100%;
-  transition: all 0.2s linear;
-  overflow: hidden;
+.mc-slide .slide img {
+  width: 584px;
+  height: 722px;
+  display: block;
 }
 
-.main-contents .new-contents .slide-item .photo img:hover {
+.mc-slide .slick-center img {
+  height: 940px;
+  transition: all 0.3s;
+}
+
+.mc-slide .slide:hover img {
   transform: scale(1.2);
+  transition: all 0.2s linear;
 }
 
-.main-contents .new-contents .slide-item .text_box {
+.mc-slide p {
   text-align: center;
   margin-top: 16px;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+  display: block;
+}
+
+.slick-prev::before {
+  content: "\e93d";
+}
+
+.slick-next::before {
+  content: "\e940";
+}
+
+.main-contents .slick-prev {
+  left: 0;
+  z-index: 10;
+}
+.main-contents .slick-next {
+  right: 24px;
+  z-index: 10;
+}
+
+.main-contents .slick-prev,
+.main-contents .slick-next {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 40%;
+  display: block;
+  padding: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+}
+
+.main-contents .slick-prev:hover,
+.main-contents .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main-contents .slick-prev::before,
+.main-contents .slick-next::before {
+  font-size: 32px;
+  color: #fff;
+  font-family: "xeicon";
+  line-height: 1;
+  opacity: 0.75;
+  color: rgba(250, 250, 250, 0.2);
 }
 
 /* main-unit  */

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>더한섬닷컴 | THE HANDSOME</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
@@ -19,7 +20,6 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/detail.css" />
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/app.js"></script>
@@ -101,7 +101,7 @@
                 <div class="icon"></div>
               </div>
               <div class="sku">
-                <p>SY2D7KCD801W_PE</p>
+                <button class="btn_opn">SY2D7KCD801W_PE</button>
               </div>
               <div class="last">
                 <div class="comment">
@@ -173,9 +173,25 @@
               <dl class="prd-info3">
                 <dt>사이즈</dt>
                 <dd>
-                  <button class="select-box">
-                    <span>사이즈 선택</span>
-                  </button>
+                  <div class="size-list-box">
+                    <button class="select-box">
+                      <span>사이즈 선택</span>
+                    </button>
+                    <ul>
+                      <li>
+                        <span>61(44)</span>
+                        <span></span>
+                      </li>
+                      <li>
+                        <span>64(55)</span>
+                        <span></span>
+                      </li>
+                      <li>
+                        <span>67(66)</span>
+                        <span></span>
+                      </li>
+                    </ul>
+                  </div>
                 </dd>
               </dl>
               <dl class="prd-info4">
@@ -185,8 +201,10 @@
                     <button class="minus">
                       <span class="blank"></span>
                     </button>
-                    <div class="text">수량</div>
-                    <button class="plus">+</button>
+                    <div class="text">1</div>
+                    <button class="plus">
+                      <span class="blank"></span>
+                    </button>
                   </div>
                 </dd>
               </dl>
@@ -670,18 +688,13 @@
     </div>
 
     <script>
+      //이미지 슬라이드
       $(".wrapper2").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         fade: true,
         asNavFor: ".wrapper",
-        // $(".wrapper2 .slide").on(
-        //   "afterChange",
-        //   function (event, slick, currentSlide) {
-        //     console.log(currentSlide);
-        //   }
-        // );
       });
       $(".wrapper").slick({
         slidesToShow: 6,
@@ -691,6 +704,65 @@
         centerMode: true,
         focusOnSelect: true,
       });
+
+      //모달
+      $(".btn_opn").click(function () {
+        $(".dimm").show();
+        $(".modal").show();
+      });
+
+      $(".btn_close").click(function () {
+        $(".dimm").hide();
+        $(".modal").hide();
+      });
+
+      //사이즈선택
+      $(".size-list-box").find(".slect-box span").addClass("active");
+      $(".size-list-box").find(".size-list-box ul").slideDown();
+
+      $(".size-list-box .select-box span").on("click", function () {
+        if ($(this).hasClass("active")) {
+          $(".prd-info3").find(".size-list-box ul").slideDown();
+          $(this).removeClass("active").next().slideUp();
+        } else {
+          $(".size-list-box .select-box span").removeClass("active");
+          $(".prd-info3").find(".size-list-box ul").slideUp();
+          $(this).addClass("active").next().slideDown();
+        }
+      });
+
+      //수량버튼
+      const count = document.querySelector(".text");
+      const btns = document.querySelectorAll(".prd-info4 .btns button");
+      console.log(btns);
+      let num = 1;
+      function printTotlaPrice() {
+        count.textContent = num;
+        sum.textContent = count * num;
+      }
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          if (e.target.className === "plus") {
+            num++;
+            printTotlaPrice();
+          } else if (e.target.className === "minus") {
+            num--;
+            if (num <= 1) num = 1;
+            printTotlaPrice();
+          } else {
+            num = 1;
+            printTotlaPrice();
+          }
+        });
+      });
+
+      function init() {
+        price.textContent = count;
+        printTotlaPrice();
+      }
+
+      init();
     </script>
   </body>
 </html>

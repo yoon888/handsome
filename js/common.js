@@ -9,22 +9,6 @@ $(function () {
     nextArrow: $(".xi-angle-right-thin"),
   });
 
-  // main-brand;
-  // $(".mbn-slide").slick({
-  //   infinite: false,
-  //   slidesToShow: 6,
-  //   slidesToScroll: 6,
-  //   arrows: false,
-  //   dots: true,
-  // });
-  // var swiper = new Swiper(".mbn-slide", {
-  //   slidesPerView: 6,
-  //   spaceBetween: 20,
-  //   scrollbar: {
-  //     el: ".swiper-scrollbar",
-  //   },
-  // });
-
   $(".slide_02 .item .mbn-image-b").hover(
     function () {
       var idx = $(".slide_02 .item .mbn-image-b").index(this);

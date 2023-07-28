@@ -146,8 +146,10 @@
   align-items: center;
 }
 
-.menu-detail .top-title .sku {
+.menu-detail .top-title .sku button {
   margin-top: 18px;
+  border: none;
+  background-color: #fff;
   color: #707070;
 }
 
@@ -386,6 +388,23 @@ dt {
 }
 
 .prd-info3 dd {
+  position: relative;
+}
+
+.prd-info3 .size-list-box {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.prd-info3 .size-list-box ul {
+  border: 1px solid #000;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 100%;
+}
+
+.prd-info3 dd {
   width: calc(100% - 73px);
 }
 
@@ -409,12 +428,40 @@ dt {
 .prd-info3 dd .select-box span::after {
   position: absolute;
   content: "";
-  background: url("../images/page-03-down-arrow.svg");
-  right: 15px;
   top: calc(50% - 8px);
-  width: 16px;
-  height: 16px;
-  background-size: cover;
+  cursor: pointer;
+  top: 16px;
+  right: 16px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.prd-info3 dd .select-box span.active::after {
+  transform: rotate(225deg);
+}
+
+.prd-info3 .size-list-box {
+}
+
+.prd-info3 ul {
+  max-height: 163px;
+  display: none;
+  z-index: 100;
+  background-color: #fff;
+  width: 100%;
+}
+
+.prd-info3 ul li {
+  border-bottom: 1px solid #f0f0f0;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
   cursor: pointer;
 }
 
@@ -436,24 +483,27 @@ dt {
   position: relative;
   box-sizing: border-box;
   border: 1px solid #e5e5e5;
-  /* background-color: #fff; */
   width: 112px;
+  background-color: #fbfbfb;
 }
 
 .prd-info4 .btns {
-  background-color: #ccc;
 }
 
 .prd-info4 .btns button {
   width: 34px;
   height: 100%;
   border: none;
+  background-color: transparent;
 }
 
-.prd-info4 dd .btns .minus {
+.prd-info4 dd .btns .minus,
+.prd-info4 dd .btns .plus {
+  position: relative;
 }
 
-.prd-info4 dd .btns .minus span {
+.prd-info4 dd .btns .minus span,
+.prd-info4 dd .btns .plus span {
   width: 11px;
   height: 11px;
   display: block;
@@ -465,10 +515,32 @@ dt {
 .prd-info4 dd .btns .minus .blank::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
   width: 11px;
   height: 1px;
+  background-color: #ccc;
+}
+
+.prd-info4 dd .btns .plus .blank::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  width: 11px;
+  height: 1px;
+  background-color: #ccc;
+}
+.prd-info4 dd .btns .plus .blank::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 11px;
   background-color: #ccc;
 }
 
@@ -1232,20 +1304,21 @@ table th {
   transform: translate(-50%, -50%);
   max-height: 800px;
   background-color: #fff;
+  border-top: 2px solid #000;
+  margin: 20px;
+  display: none;
 }
 
 .modal-pu {
-  margin: 20px;
   width: 380px;
   height: 100%;
+  padding: 24px;
   align-items: center;
   justify-content: center;
 }
 
 .modal-pu .icon {
-  width: 380px;
-  height: 72px;
-  padding: 24px;
+  height: 60px;
 }
 
 .modal-pu i {
@@ -1259,6 +1332,8 @@ table th {
 
 .modal-pu p {
   text-align: center;
+  min-height: 48px;
+  font-size: 16px;
 }
 
 .modal-pu button {
@@ -1267,5 +1342,15 @@ table th {
   background-color: #111;
   color: #fff;
   border: none;
-  margin: 34px 0;
+  margin-top: 30px;
+}
+
+.dimm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: none;
 }

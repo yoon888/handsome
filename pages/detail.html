@@ -93,8 +93,18 @@
               </ul>
               <div class="name">
                 <h3>울 블렌드 엠브로이더리 가디건</h3>
-                <a href="#x" class="blank"></a>
-                <a href="#x" class="blank"></a>
+                <div class="icons">
+                  <div class="share_icon">
+                    <button></button>
+                    <div class="share_icons">
+                      <button class="btn-fb"></button>
+                      <button class="btn-twit"></button>
+                      <button class="btn-printer"></button>
+                      <button class="btn-url">URL</button>
+                    </div>
+                  </div>
+                  <button class="zzim_btn"></button>
+                </div>
               </div>
               <div class="price">
                 <p>479,000<span>원</span></p>
@@ -115,7 +125,7 @@
                   <p>상품평</p>
                 </div>
                 <div class="coupon">
-                  <p>쿠폰보기</p>
+                  <a href="#x">쿠폰보기</a>
                 </div>
               </div>
             </div>
@@ -164,7 +174,7 @@
                 <dd>
                   <div class="icons">
                     <div class="icon1"></div>
-                    <p>사이즈 추천 받기</p>
+                    <a href="#x">사이즈 추천 받기</a>
                     <div class="icon2"></div>
                   </div>
                   <p>사이즈 조건표</p>
@@ -177,7 +187,7 @@
                     <button class="select-box">
                       <span>사이즈 선택</span>
                     </button>
-                    <ul>
+                    <ul class="size_list">
                       <li>
                         <span>61(44)</span>
                         <span></span>
@@ -680,10 +690,64 @@
     <div class="modal">
       <div class="modal-pu">
         <div class="icon">
-          <i></i>
+          <i class="btn_close"></i>
         </div>
         <p>품번이 복사되었습니다.</p>
         <button class="btn_close">확인</button>
+      </div>
+    </div>
+
+    <div class="discount_modal">
+      <div class="ds_modal">
+        <div class="ds_modal_1">
+          <div class="ds_header">
+            <p>할인내역</p>
+            <button>
+              <i class="btn_close"></i>
+            </button>
+          </div>
+          <div class="ds_body">
+            <div class="ds_body_inner">
+              <ul class="ds_price">
+                <li>
+                  <p>정상가</p>
+                  <p>315,000원</p>
+                </li>
+                <li>
+                  <p>[15%] 신규회원 정상 앱전용 쿠폰</p>
+                  <p>-47,250원</p>
+                </li>
+                <li>
+                  <p>최대 혜택가</p>
+                  <strong>267,750원</strong>
+                </li>
+              </ul>
+              <ul class="notice">
+                <li>현재 가격은 회원에 한해 최적가로 적용되었습니다.</li>
+                <li>최대혜택가는 주문 시 상이 할 수 있습니다.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ds_footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="coupon_modal">
+      <div class="cp_modal">
+        <div class="cp_header"></div>
+        <div class="cp_body">
+          <div class="cp_bodyInner">
+            <div class="cp_top">
+              <p>로그인 후 쿠폰을<br />확인하실 수 있습니다.</p>
+            </div>
+            <div class="cp_btn">
+              <button class="btn_close">닫기</button>
+              <button class="ok">확인</button>
+            </div>
+          </div>
+        </div>
+        <div class="cp_footer"></div>
       </div>
     </div>
 
@@ -716,18 +780,36 @@
         $(".modal").hide();
       });
 
-      //사이즈선택
-      $(".size-list-box").find(".slect-box span").addClass("active");
-      $(".size-list-box").find(".size-list-box ul").slideDown();
+      $(".price > .icon").click(function () {
+        $(".dimm").show();
+        $(".discount_modal").show();
+      });
 
-      $(".size-list-box .select-box span").on("click", function () {
-        if ($(this).hasClass("active")) {
-          $(".prd-info3").find(".size-list-box ul").slideDown();
-          $(this).removeClass("active").next().slideUp();
+      $(".btn_close").click(function () {
+        $(".dimm").hide();
+        $(".discount_modal").hide();
+      });
+
+      $(".coupon > a").click(function () {
+        $(".dimm").show();
+        $(".coupon_modal").show();
+      });
+
+      $(".btn_close").click(function () {
+        $(".dimm").hide();
+        $(".coupon_modal").hide();
+      });
+
+      //사이즈선택
+
+      $(".select-box").on("click", function () {
+        if ($(this).hasClass("open")) {
+          $(".slect-box").find(".size_list").css("opacity", "1");
+          $(this).removeClass("open").next().css("opacity", "0");
         } else {
-          $(".size-list-box .select-box span").removeClass("active");
-          $(".prd-info3").find(".size-list-box ul").slideUp();
-          $(this).addClass("active").next().slideDown();
+          $(".select-box").removeClass("open");
+          $(".slect-box").find(".size_list").css("opacity", "0");
+          $(this).addClass("open").next().css("opacity", "1");
         }
       });
 

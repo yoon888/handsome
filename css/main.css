@@ -1,13 +1,10 @@
-.header:hover {
-  height: 136px;
-  background-color: #fff;
-}
 .header-head .header-logo,
 .header-btns a,
 .hb-left > li > a,
 .hb-right li a {
   filter: invert(1);
 }
+
 .header:hover .header-head .header-logo,
 .header:hover .header-btns a,
 .header:hover .hb-left > li > a,

@@ -137,8 +137,99 @@
 }
 
 .menu-detail .top-title .name {
+  display: flex;
+  justify-content: space-between;
   margin-top: 9px;
   align-items: center;
+}
+
+.menu-detail .top-title .name .icons {
+  display: flex;
+}
+
+.menu-detail .top-title .name .share_icon {
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+
+.menu-detail .top-title .name .share_icon > button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  background-image: url(../images/common-icon.svg);
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+  background-position: -450px 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-detail .top-title .name .share_icon > .share_icons {
+  position: absolute;
+  top: -9px;
+  right: 0;
+  height: 48px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 11px 10px;
+  display: none;
+}
+.menu-detail .top-title .name .share_icon:hover > .share_icons {
+  display: flex;
+}
+
+.menu-detail .top-title .name .share_icon > .share_icons > button {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+}
+.menu-detail .top-title .name .share_icon > .share_icons > button.btn-fb {
+  background-image: url(../images/icon-fb.svg);
+  background-size: 24px 24px;
+}
+.menu-detail .top-title .name .share_icon > .share_icons > button.btn-twit {
+  background-image: url(../images/icon-twit.svg);
+  background-size: 24px 24px;
+}
+.menu-detail .top-title .name .share_icon > .share_icons > button.btn-printer {
+  background-image: url(../images/icon-pin.svg);
+  background-size: 24px 24px;
+}
+.menu-detail .top-title .name .share_icon > .share_icons > button.btn-url {
+  width: 30px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.zzim_btn {
+  display: inline-block;
+  position: relative;
+  margin: 0 -3px 0 7px;
+  width: 30px;
+  height: 30px;
+}
+
+.zzim_btn::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/common-icon.svg);
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+  background-position: -200px 0;
 }
 
 .menu-detail .top-title .price {
@@ -236,7 +327,8 @@
   padding: 8px 16px;
 }
 
-.coupon p {
+.coupon a {
+  display: block;
   font-size: 14px;
   text-align: center;
   align-items: center;
@@ -351,7 +443,7 @@ dt {
   white-space: nowrap;
 }
 
-.prd-info2 dd > p {
+.prd-info2 dd > a {
   text-decoration: underline;
   font-size: 12px;
 }
@@ -396,14 +488,6 @@ dt {
   background-color: #fff;
 }
 
-.prd-info3 .size-list-box ul {
-  border: 1px solid #000;
-  position: absolute;
-  top: 42px;
-  left: 0;
-  width: 100%;
-}
-
 .prd-info3 dd {
   width: calc(100% - 73px);
 }
@@ -422,40 +506,41 @@ dt {
 }
 
 .prd-info3 .select-box span {
+  font-size: 16px;
+  line-height: 24px;
   color: #707070;
 }
 
 .prd-info3 dd .select-box span::after {
   position: absolute;
   content: "";
+  right: 15px;
   top: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
   cursor: pointer;
-  top: 16px;
-  right: 16px;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid #333;
-  border-bottom: 2px solid #333;
-  transform: rotate(45deg);
-  transition: transform 0.2s;
+  background: url("../images/icon-select-arrow.svg") no-repeat 0 0;
+  background-size: 100% 100%;
+  transform: rotate(0);
 }
 
-.prd-info3 dd .select-box span.active::after {
-  transform: rotate(225deg);
+.prd-info3 dd .select-box.open span::after {
+  transform: rotate(180deg);
 }
 
-.prd-info3 .size-list-box {
-}
-
-.prd-info3 ul {
+.prd-info3 .size_list {
+  border: 1px solid #000;
+  position: absolute;
+  top: 42px;
+  left: 0;
   max-height: 163px;
-  display: none;
   z-index: 100;
   background-color: #fff;
   width: 100%;
+  opacity: 0;
 }
 
-.prd-info3 ul li {
+.prd-info3 .size_list > li {
   border-bottom: 1px solid #f0f0f0;
   height: 41px;
   display: flex;
@@ -1297,6 +1382,7 @@ table th {
   display: block;
 }
 
+/* modal */
 .modal {
   position: fixed;
   top: 50%;
@@ -1307,6 +1393,7 @@ table th {
   border-top: 2px solid #000;
   margin: 20px;
   display: none;
+  z-index: 20;
 }
 
 .modal-pu {
@@ -1328,6 +1415,7 @@ table th {
   width: 24px;
   height: 24px;
   background: url("../images/common-icon.svg") -100px 0;
+  cursor: pointer;
 }
 
 .modal-pu p {
@@ -1345,12 +1433,191 @@ table th {
   margin-top: 30px;
 }
 
+.discount_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  z-index: 10;
+  display: none;
+}
+
+.ds_modal {
+  max-height: 800px;
+  margin-right: 37px;
+  border-top: 2px solid #000;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 20px;
+  background: #fff;
+}
+
+.ds_modal_1 {
+  width: 540px;
+  position: relative;
+  height: 100%;
+  min-height: 10px;
+  padding: 0 0 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ds_header {
+  padding: 44px 24px 24px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ds_header > p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.ds_header > button {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: none;
+  background-color: #fff;
+  width: auto;
+}
+
+.ds_header > button > i {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  background-image: url(../images/common-icon.svg);
+  background-size: 500px auto;
+  background-repeat: no-repeat;
+  background-position: -100px 0;
+}
+
+.ds_body {
+  width: 100%;
+  padding: 0 0 0 24px;
+}
+
+.ds_body_inner {
+  width: 492px;
+  border-top: 1px solid #000;
+}
+
+.ds_body_inner > .ds_price > li {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ds_body_inner > .ds_price > li strong {
+  font-weight: 700;
+}
+
+.ds_body_inner .notice {
+  margin-top: 10px;
+}
+
+.ds_body_inner .notice > li {
+  color: #707070;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.ds_body_inner .notice > li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #707070;
+}
+
+.coupon_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 800px;
+  background-color: #fff;
+  border-top: 2px solid #000;
+  margin: 20px;
+  display: none;
+  z-index: 20;
+}
+
+.cp_modal {
+  width: 380px;
+  height: 100%;
+  min-height: 10px;
+  padding: 0 0 34px;
+}
+
+.cp_header {
+  padding: 72px 24px 0;
+  width: 100%;
+}
+
+.cp_body {
+  padding: 0 0 0 24px;
+}
+
+.cp_bodyInner {
+  width: 332px;
+}
+
+.cp_bodyInner .cp_top p {
+  text-align: center;
+}
+
+.cp_btn {
+  margin-top: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cp_btn > button {
+  margin-right: 10px;
+  flex: 1;
+  background-color: #fff;
+  height: 60px;
+  border: none;
+  outline: 0;
+}
+
+.cp_btn > button.btn_close {
+  border: thin solid;
+}
+
+.cp_btn > button.ok {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  padding-right: 0;
+}
+
 .dimm {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.2);
   display: none;
+  z-index: 10;
 }

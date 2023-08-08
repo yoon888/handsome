@@ -470,6 +470,8 @@
 
 .best-contents {
   margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .best-contents .top {
@@ -491,6 +493,8 @@
 
 .best-contents .bottom {
   max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .best-contents .bottom-items {
@@ -501,7 +505,7 @@
 
 .best-contents .bottom-items .photo {
   position: relative;
-  /* width: 280px; */
+  width: 280px;
 }
 
 .best-contents .bottom-items .photo #last {
@@ -520,7 +524,7 @@
 .main-best .bottom-items .items {
   margin-right: 24px;
   position: relative;
-  width: 280px;
+  width: 200px;
   height: 100%;
 }
 

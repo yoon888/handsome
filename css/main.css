@@ -14,6 +14,11 @@
 
 /* main */
 
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .main-slider {
   flex: 1;
   display: block;
@@ -458,14 +463,21 @@
 /* main-best */
 
 .main-best {
+  max-width: 1800px;
+  min-width: 1320px;
+  margin: 0 auto;
+}
+
+.main-best-inner {
   margin-top: 140px;
-  margin-left: 50px;
-  margin-right: 50px;
+  /* margin-left: 50px;
+  margin-right: 50px; */
 }
 
 .main-best h2 {
   font-size: var(--title-01);
   font-weight: 400;
+  width: 100%;
 }
 
 .best-contents {
@@ -573,8 +585,8 @@
 /* main-contents */
 
 .main-contents {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 140px;
   max-width: 1800px;
   /* width: 1320px; */

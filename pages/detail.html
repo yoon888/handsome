@@ -684,6 +684,20 @@
       </div>
     </div>
 
+    <div class="bottom_price">
+      <div class="bottom_price_inner">
+        <div class="bp_info">
+          <h3>총합계</h3>
+          <p><span>645,000</span>원<p3>
+        </div>
+        <div class="bp_price">
+          <button>선물하기</button>
+          <button>쇼핑백</button>
+          <button>바로구매</button>
+        </div>
+      </div>
+    </div>
+
     <div class="footer"></div>
 
     <div class="dimm"></div>
@@ -845,6 +859,17 @@
       }
 
       init();
+
+      $(window).scroll(function () {
+        var bottomPrice = $(document).scrollTop();
+        console.log(bottomPrice);
+
+        if (bottomPrice > 1000) {
+          $(".bottom_price").css("display","block");
+        } else {
+          $(".bottom_price").css("display","none");
+        }
+      });
     </script>
   </body>
 </html>

@@ -51,6 +51,7 @@
   width: 70px;
   width: 50px;
   margin: 0 !important;
+  transform: translate(0px, 0px, 0px);
 }
 
 .photo-detail .left .wrapper .slide {

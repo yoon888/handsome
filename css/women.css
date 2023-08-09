@@ -504,8 +504,8 @@
   right: 40px;
   top: calc(50% - 9px);
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   background-image: url(../images/common-icon.svg);
   background-size: 500px auto;
   background-repeat: no-repeat;

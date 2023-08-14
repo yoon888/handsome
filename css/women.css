@@ -42,19 +42,19 @@
   padding-bottom: 14px;
 }
 
-.women li {
+.women .inner {
   display: flex;
   align-items: center;
 }
 
-.women li button {
+.women .inner button {
   display: flex;
   align-items: center;
   border: none;
   background-color: #fff;
 }
 
-.women li button::after {
+.women .inner button::after {
   content: "";
   display: inline-block;
   width: 12px;
@@ -64,27 +64,28 @@
   background-repeat: no-repeat;
   background-position: -450px -200px;
   margin-left: 4px;
+  cursor: pointer;
 }
 
-.women li button.open::after {
+.women .inner button.open::after {
   transform: rotate(180deg);
 }
 
-.women li button.open ul {
-  opacity: 1;
+.women .inner ul {
+  opacity: 0;
 }
 
-.women > li ul > li > a {
+.women .women-menu > li > a {
   padding-left: 10px;
   position: relative;
   display: block;
 }
 
-.women > li ul > li > a.active {
+.women .women-menu > li > a.active {
   font-weight: 700;
 }
 
-.women > li ul > li > a::before {
+.women .women-menu > li > a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -95,7 +96,7 @@
   background-color: #000;
 }
 
-.women > li ul {
+.women .women-menu {
   position: absolute;
   left: 0;
   top: 39px;
@@ -108,7 +109,11 @@
   opacity: 0;
 }
 
-.women > li ul > li {
+.women .women-menu.open {
+  opacity: 1;
+}
+
+.women .women-menu > li {
   margin-right: 20px;
 }
 
@@ -127,6 +132,10 @@
   margin-right: 10px;
   cursor: pointer;
 }
+.category-1 .bottom-menu li.active {
+  font-weight: 700;
+}
+
 .category-1 .bottom-menu li.on {
   font-weight: 700;
 }
@@ -235,9 +244,9 @@
 
 .women-img > li {
   padding: 5px;
-  background-color: red;
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 
 .women-image li .img-f {

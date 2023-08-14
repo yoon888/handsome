@@ -149,11 +149,9 @@
 
 <script>
   var navOffsetValue = $("#header").offset().top;
-  console.log(navOffsetValue);
 
   $(window).scroll(function () {
     var scrollTopValue = $(document).scrollTop();
-    console.log(scrollTopValue);
 
     if (scrollTopValue > navOffsetValue) {
       $("#header").addClass("fixed");

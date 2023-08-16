@@ -36,6 +36,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/slide.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -577,9 +578,9 @@
                   <li class="active"><a href="#x">여성</a></li>
                   <li><a href="#x">남성</a></li>
                   <li><a href="#x">잡화</a></li>
-                  <li><a href="#x">키즈</a></li>
-                  <li><a href="#x">뷰티</a></li>
-                  <li><a href="#x">라이프스타일</a></li>
+                  <a href="#x">키즈</a>
+                  <a href="#x">뷰티</a>
+                  <a href="#x">라이프스타일</a>
                 </ul>
               </div>
 
@@ -870,10 +871,10 @@
                 <li><a href="#x">여성</a></li>
                 <li><a href="#x">남성</a></li>
                 <li><a href="#x">잡화</a></li>
-                <li><a href="#x">골프</a></li>
-                <li><a href="#x">키즈</a></li>
-                <li><a href="#x">뷰티</a></li>
-                <li><a href="#x">라이프스타일</a></li>
+                <a href="#x">골프</a>
+                <a href="#x">키즈</a>
+                <a href="#x">뷰티</a>
+                <a href="#x">라이프스타일</a>
               </ul>
               <div class="bottom">
                 <ul class="bottom-items">
@@ -1357,96 +1358,5 @@
 
       <div class="footer"></div>
     </div>
-
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 6,
-        spaceBetween: 20,
-        autoplay: true,
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
-      });
-
-      $(".main-new .right .items li").hover(
-        function () {
-          var idx = $(".main-new .right .items li").index(this);
-          $(".main-new .right .items li #back").eq(idx).addClass("active");
-        },
-        function () {
-          var idx = $(".main-new .right .items li").index(this);
-          $(".main-new .right .items li #back").eq(idx).removeClass("active");
-        }
-      );
-
-      $(".main-new-leftList li").eq(0).addClass("active");
-      $(".right ul").hide().eq(0).show();
-
-      $(".main-new-leftList li").click(function () {
-        $(".main-new-leftList li").removeClass("active");
-        $(this).addClass("active");
-
-        $(".right ul").hide();
-
-        var mainNew = $(this).index();
-        console.log(mainNew);
-        $(".right ul").eq(mainNew).show();
-      });
-
-      $(".banner-inner").slick({
-        infinite: true,
-        speed: 300,
-        autoplay: true,
-        dots: true,
-        arrows: true,
-      });
-
-      $(".main-best .top li").eq(0).addClass("on");
-      $(".bottom-items").hide().eq(0).show();
-
-      $(".main-best .top li").click(function () {
-        $(".main-best .top li").removeClass("on");
-        $(this).addClass("on");
-
-        $(".bottom-items").hide();
-
-        var idx = $(this).index();
-        $(".bottom-items").eq(idx).show(idx);
-      });
-
-      $(".main-best .bottom .bottom-items li").hover(
-        function () {
-          var idx = $(".main-best .bottom .bottom-items li").index(this);
-          $(".main-best .bottom .bottom-items li #last")
-            .eq(idx)
-            .addClass("active");
-        },
-        function () {
-          var idx = $(".main-best .bottom .bottom-items li").index(this);
-          $(".main-best .bottom .bottom-items li #last")
-            .eq(idx)
-            .removeClass("active");
-        }
-      );
-
-      $(".bottom-items").slick({
-        infinite: false,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        arrows: false,
-        dots: false,
-      });
-
-      $(".main-contents .mc-slide").slick({
-        infinite: false,
-        centerMode: true,
-        centerPadding: false,
-        dots: false,
-        arrows: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 1,
-      });
-    </script>
   </body>
 </html>

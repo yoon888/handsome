@@ -261,12 +261,18 @@
   font-weight: 400;
 }
 
-.main-new .new-items .box .left ul {
+.main-new .new-items .box .left .main-new-leftList {
   margin-top: 32px;
   font-size: 22px;
 }
 
-.main-new .new-items .box .left li {
+.main-new .new-items .box .left .main-new-leftList li {
+  margin-top: 16px;
+}
+
+.main-new .new-items .box .left .main-new-leftList a {
+  display: block;
+  width: 100%;
   margin-top: 16px;
 }
 
@@ -505,12 +511,17 @@
   margin-bottom: 32px;
 }
 
-.best-contents .top li {
+.best-contents .top > li {
   margin-right: 32px;
 }
 
-.best-contents .top li a {
+.best-contents .top > li a {
   font-size: 22px;
+}
+
+.best-contents .top > a {
+  font-size: 22px;
+  margin-right: 32px;
 }
 
 .best-contents .top li.on {
